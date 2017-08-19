@@ -20,6 +20,11 @@ export default props => (
                 icon='plus'
                 onClick={props.handleAdd}
             />
+            <IconButton
+                style='info'
+                icon='search'
+                onClick={props.handleSearch}
+            />
         </Grid>
     </div>
 );
