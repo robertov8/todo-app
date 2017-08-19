@@ -4,15 +4,23 @@ import TodoForm from './todoForm';
 import TodoList from './todoList';
 
 export default class Todo extends Component {
+    constructor(props) {
+        super(props);
+        this.handleAdd = this.handleAdd.bind(this);
+    }
+
+    handleAdd() {
+        console.log(this);
+    }
+
     render() {
         return (
             <div className='todo'>
                 <PageHeader name='Tarefas' small='Cadastro' />
 
-                <TodoForm />
+                <TodoForm handleAdd={() => this.handleAdd()} />
                 <TodoList />
             </div>
-
         );
     }
 }
